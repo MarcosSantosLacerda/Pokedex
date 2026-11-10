@@ -3,10 +3,7 @@
 Pokédex interativa da primeira geração (151 Pokémon) feita para a **Atividade 03** de Desenvolvimento e Integração de Aplicações Web.
 
 **Integrantes da dupla:**
-
-- Nome 1
-- Nome 2
-
+- Marcos Henrique Santos Lacerda
 ## Como executar
 
 Pré-requisito: [Node.js](https://nodejs.org) 18 ou superior.
