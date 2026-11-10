@@ -1,0 +1,100 @@
+.card {
+  position: relative;
+  height: 100%;
+  background: color-mix(in srgb, var(--type) 16%, var(--surface));
+  border: 1.5px solid color-mix(in srgb, var(--type) 38%, var(--line));
+  border-radius: var(--radius-card);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--type);
+  box-shadow: var(--shadow);
+}
+
+.card__open {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 14px 12px 14px;
+  background: none;
+  border: 0;
+  border-radius: inherit;
+  text-align: center;
+}
+
+.card__id {
+  justify-self: start;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--type) 70%, var(--ink));
+  font-variant-numeric: tabular-nums;
+}
+
+.card__img {
+  width: 128px;
+  height: 128px;
+}
+
+.card__name {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.card__types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.card__stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
+  width: 100%;
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1.5px solid color-mix(in srgb, var(--type) 30%, var(--line));
+}
+
+.card__stats dt {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.card__stats dd {
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.card__actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card__actions .icon-btn {
+  width: 34px;
+  height: 34px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+  .card__img {
+    width: 100px;
+    height: 100px;
+  }
+  .card__name {
+    font-size: 1.05rem;
+  }
+}

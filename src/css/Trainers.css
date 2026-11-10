@@ -1,0 +1,89 @@
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.trainer {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  height: 100%;
+  padding: 20px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+.trainer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.trainer__head h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.trainer__badges {
+  display: grid;
+  grid-template-columns: repeat(9, 9px);
+  gap: 3px;
+}
+
+.trainer__badges i {
+  height: 9px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+}
+
+.trainer__badges i.is-earned {
+  background: #f7b500;
+  border-color: #c98f00;
+}
+
+.trainer__meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.trainer__team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 12px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: border-color 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+}
+
+.chip__id {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.chip__count {
+  padding: 1px 6px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}

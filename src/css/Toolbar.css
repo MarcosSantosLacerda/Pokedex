@@ -1,0 +1,91 @@
+.toolbar {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+.toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.search {
+  position: relative;
+  flex: 1 1 280px;
+}
+
+.search input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px 0 44px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-control);
+}
+
+.search input::placeholder {
+  color: var(--muted);
+}
+
+.search input:focus {
+  border-color: var(--accent);
+  outline-offset: 0;
+}
+
+.search__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.sort select {
+  min-height: 42px;
+  padding: 0 10px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-control);
+}
+
+.type-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    padding: 14px;
+  }
+  /* filtro de tipos vira uma faixa rolável para ocupar menos altura */
+  .type-filter {
+    flex-wrap: nowrap;
+    margin: 0 -14px;
+    padding: 0 14px 6px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .type-filter .type-badge {
+    flex: none;
+  }
+}
